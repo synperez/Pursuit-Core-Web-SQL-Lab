@@ -1,0 +1,98 @@
+1
+SELECT Title
+FROM movies;
+
+SELECT director
+FROM movies;
+
+SELECT director, title
+FROM movies;
+
+SELECT year, title
+FROM movies;
+
+SELECT *
+FROM movies;
+
+2
+SELECT id, title
+FROM movies 
+WHERE id = 6;
+
+SELECT title, year 
+FROM movies
+WHERE year BETWEEN 2000 AND 2010
+
+SELECT title, year 
+FROM movies
+WHERE year NOT BETWEEN 2000 AND 2010
+
+SELECT id, title, year
+FROM movies 
+WHERE id < 6;
+
+3
+SELECT title
+FROM movies 
+WHERE title LIKE "Toy%";
+
+SELECT *
+FROM movies 
+where Director LIKE "John%"
+
+SELECT *
+FROM movies 
+where Director not LIKE "John%"
+
+SELECT title
+FROM movies 
+WHERE title LIKE "wall%";
+
+4
+SELECT DISTINCT director 
+FROM movies
+ORDER BY director ASC;
+
+select title, year
+from movies
+order by year desc 
+limit 4
+
+select title, year
+from movies
+order by title asc 
+limit 5
+
+select title, year
+from movies
+order by title asc 
+limit 5 offset 5
+
+5
+SELECT * 
+FROM north_american_cities
+WHERE country like "Ca%";
+
+SELECT city, latitude 
+FROM north_american_cities
+WHERE country like "un%";
+ORDER BY Latitude DESC
+
+select city, longitude
+from north_american_cities
+where longitude < -87.629798
+order by longitude desc
+
+select city, country, population
+from north_american_cities
+where country like "mex%"
+order by population desc
+limit 2 
+
+select city, country, population
+from north_american_cities
+where country like "un%"
+order by population desc
+limit 2 offset 2
+
+6
